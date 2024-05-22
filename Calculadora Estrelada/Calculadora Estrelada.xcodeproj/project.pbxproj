@@ -11,6 +11,15 @@
 		5A5D38B22BFD4CEC00DDA162 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38B12BFD4CEC00DDA162 /* ContentView.swift */; };
 		5A5D38B42BFD4CED00DDA162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38B32BFD4CED00DDA162 /* Assets.xcassets */; };
 		5A5D38B72BFD4CED00DDA162 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38B62BFD4CED00DDA162 /* Preview Assets.xcassets */; };
+		5A5D38BE2BFD4E7400DDA162 /* BackgroundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38BD2BFD4E7400DDA162 /* BackgroundAnimation.swift */; };
+		5A5D38C02BFD4F3E00DDA162 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38BF2BFD4F3E00DDA162 /* TitleView.swift */; };
+		5A5D38C32BFD4F7A00DDA162 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38C12BFD4F7A00DDA162 /* Localizable.strings */; };
+		5A5D38C52BFD4FB300DDA162 /* StoredCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38C42BFD4FB300DDA162 /* StoredCities.swift */; };
+		5A5D38CB2BFD50BC00DDA162 /* Goldman-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38C82BFD50BC00DDA162 /* Goldman-Regular.ttf */; };
+		5A5D38CC2BFD50BC00DDA162 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38C92BFD50BC00DDA162 /* Minecraft.ttf */; };
+		5A5D38CD2BFD50BC00DDA162 /* Goldman-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38CA2BFD50BC00DDA162 /* Goldman-Bold.ttf */; };
+		5A5D38CF2BFD5BD500DDA162 /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38CE2BFD5BD500DDA162 /* ProgressViewStyle.swift */; };
+		5A5D38D12BFD6EDF00DDA162 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38D02BFD6EDF00DDA162 /* KeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,16 @@
 		5A5D38B12BFD4CEC00DDA162 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5A5D38B32BFD4CED00DDA162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A5D38B62BFD4CED00DDA162 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5A5D38BD2BFD4E7400DDA162 /* BackgroundAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAnimation.swift; sourceTree = "<group>"; };
+		5A5D38BF2BFD4F3E00DDA162 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		5A5D38C22BFD4F7A00DDA162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5A5D38C42BFD4FB300DDA162 /* StoredCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredCities.swift; sourceTree = "<group>"; };
+		5A5D38C62BFD500800DDA162 /* Calculadora-Estrelada-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Calculadora-Estrelada-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5A5D38C82BFD50BC00DDA162 /* Goldman-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Goldman-Regular.ttf"; sourceTree = "<group>"; };
+		5A5D38C92BFD50BC00DDA162 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		5A5D38CA2BFD50BC00DDA162 /* Goldman-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Goldman-Bold.ttf"; sourceTree = "<group>"; };
+		5A5D38CE2BFD5BD500DDA162 /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
+		5A5D38D02BFD6EDF00DDA162 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +70,17 @@
 		5A5D38AE2BFD4CEC00DDA162 /* Calculadora Estrelada */ = {
 			isa = PBXGroup;
 			children = (
+				5A5D38C72BFD507100DDA162 /* Fonts */,
 				5A5D38AF2BFD4CEC00DDA162 /* Calculadora_EstreladaApp.swift */,
 				5A5D38B12BFD4CEC00DDA162 /* ContentView.swift */,
+				5A5D38BD2BFD4E7400DDA162 /* BackgroundAnimation.swift */,
+				5A5D38BF2BFD4F3E00DDA162 /* TitleView.swift */,
+				5A5D38C42BFD4FB300DDA162 /* StoredCities.swift */,
+				5A5D38CE2BFD5BD500DDA162 /* ProgressViewStyle.swift */,
+				5A5D38D02BFD6EDF00DDA162 /* KeyboardView.swift */,
+				5A5D38C12BFD4F7A00DDA162 /* Localizable.strings */,
 				5A5D38B32BFD4CED00DDA162 /* Assets.xcassets */,
+				5A5D38C62BFD500800DDA162 /* Calculadora-Estrelada-Info.plist */,
 				5A5D38B52BFD4CED00DDA162 /* Preview Content */,
 			);
 			path = "Calculadora Estrelada";
@@ -65,6 +92,16 @@
 				5A5D38B62BFD4CED00DDA162 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A5D38C72BFD507100DDA162 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5A5D38CA2BFD50BC00DDA162 /* Goldman-Bold.ttf */,
+				5A5D38C82BFD50BC00DDA162 /* Goldman-Regular.ttf */,
+				5A5D38C92BFD50BC00DDA162 /* Minecraft.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +162,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5D38CB2BFD50BC00DDA162 /* Goldman-Regular.ttf in Resources */,
 				5A5D38B72BFD4CED00DDA162 /* Preview Assets.xcassets in Resources */,
+				5A5D38CC2BFD50BC00DDA162 /* Minecraft.ttf in Resources */,
+				5A5D38C32BFD4F7A00DDA162 /* Localizable.strings in Resources */,
+				5A5D38CD2BFD50BC00DDA162 /* Goldman-Bold.ttf in Resources */,
 				5A5D38B42BFD4CED00DDA162 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,11 +179,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A5D38B22BFD4CEC00DDA162 /* ContentView.swift in Sources */,
+				5A5D38CF2BFD5BD500DDA162 /* ProgressViewStyle.swift in Sources */,
+				5A5D38D12BFD6EDF00DDA162 /* KeyboardView.swift in Sources */,
 				5A5D38B02BFD4CEC00DDA162 /* Calculadora_EstreladaApp.swift in Sources */,
+				5A5D38BE2BFD4E7400DDA162 /* BackgroundAnimation.swift in Sources */,
+				5A5D38C02BFD4F3E00DDA162 /* TitleView.swift in Sources */,
+				5A5D38C52BFD4FB300DDA162 /* StoredCities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5A5D38C12BFD4F7A00DDA162 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A5D38C22BFD4F7A00DDA162 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5A5D38B82BFD4CED00DDA162 /* Debug */ = {
@@ -275,6 +332,7 @@
 				DEVELOPMENT_TEAM = 4N5868RZNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Calculadora-Estrelada-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +362,7 @@
 				DEVELOPMENT_TEAM = 4N5868RZNV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Calculadora-Estrelada-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

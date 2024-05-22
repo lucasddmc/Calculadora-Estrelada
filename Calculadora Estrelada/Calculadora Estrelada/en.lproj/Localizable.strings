@@ -1,0 +1,21 @@
+/*
+  Localizable.strings
+  Calculadora EstrelADA
+
+  Created by Lucas Dantas de Moura Carvalho on 13/05/24.
+  
+*/
+
+"title_1" = "Calculadora";
+
+"title_2" = "EstrelADA";
+
+"welcome_text" = "Esta calculadora estima quantas estrelas você já viu na vida, vamos começar!!!";
+
+"age_question" = "Qual a sua idade?";
+
+"time_question" = "Qual horário você costuma se deitar?";
+
+"city_question" = "Em qual cidade você mora?";
+
+"rate_question" = "De 1 a 5, o quanto você olha o céu?";
