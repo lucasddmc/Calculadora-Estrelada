@@ -257,11 +257,7 @@ struct KeyboardButton: View {
 
     var body: some View {
         Button {
-            // Calculator.algumacoisa
             isPressed = true
-            if let action {
-                action()
-            }
             task = Task(priority: .background) {
                 do {
                     try await Task.sleep(for: .milliseconds(50))
@@ -270,6 +266,11 @@ struct KeyboardButton: View {
                     }
                 } catch {
                     print(error)
+                }
+            }
+            if let action {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    action()
                 }
             }
         } label: {

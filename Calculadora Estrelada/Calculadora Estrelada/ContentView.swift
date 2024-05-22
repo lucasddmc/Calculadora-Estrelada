@@ -446,7 +446,7 @@ struct CalculatorResult: View {
                 .frame(width: 334, height: 536)
                 .clipShape(.rect(cornerRadius: 30))
             VStack {
-                FullDisplay(text: "Resultado:", valueString: $result, progress: 15)
+                FullDisplay(text: "Resultado:", valueString: $result, progress: 20)
                     .padding(.top, 25)
                 Spacer()
                 KeyboardResult(restartButtonAction: {
