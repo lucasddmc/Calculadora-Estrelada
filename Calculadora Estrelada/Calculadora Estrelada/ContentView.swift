@@ -13,6 +13,29 @@ enum TimeOperation {
     case subtract
 }
 
+func logC(of value: Double, forBase base: Double) -> Double {
+    return log(value) / log(base)
+}
+
+func processHour(hourStr: String) -> Double {
+    // Extract hour and minute components
+    let parts = hourStr.components(separatedBy: ":")
+    let hour = Int(parts[0])!
+    let minute = Int(parts[1])!
+    
+    var result: Double = if (18...23).contains(hour) {
+        Double(hour) - 18
+    } else if (0...4).contains(hour) {
+        Double(hour) + 6
+    } else {
+        0
+    }
+    
+    result += Double(minute) / 60.0
+    
+    return result
+}
+
 func modifyMinutes(_ time: String, by operation: TimeOperation) -> String? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "HH:mm"
@@ -336,7 +359,11 @@ struct Calculator3: View {
 
 struct Calculator4: View {
     @Binding var stateIndex: Int
+    @Binding var ageString: String
+    @Binding var hourString: String
+    @Binding var city: City
     @Binding var starsRateString: String
+    @Binding var result: String
 
     var body: some View {
         ZStack {
@@ -373,8 +400,65 @@ struct Calculator4: View {
                     starsRateString = "0"
                     stateIndex -= 1
                 }, finishButtonAction: {
-                    // TODO: handle result
+                    var _result = Double(city.visibleStars)
+                    let ageDouble = Double(ageString)
+                    guard let ageDouble else {
+                        print("ageString couldn't be converted to ageDouble, ageString: \(ageString)")
+                        return
+                    }
+                    _result *= logC(of: ageDouble, forBase: 3) / 4.0
+                    _result *= logC(of: processHour(hourStr: hourString), forBase: 2) / 3.55
+                    
+                    guard let rate = Double(starsRateString) else {
+                        print("stars rate string couldn't be converted to Double, value: \(starsRateString)")
+                        return
+                    }
+                    _result *= 0.7 + (0.3 * rate / 5)
+                    _result *= 0.95 + 0.1 * Double.random(in: 0...1) // 5% para mais ou para menos
                     stateIndex += 1
+                    
+                    result = String(Int(_result))
+                })
+                    .padding(.bottom, 50)
+            }
+        }
+        .frame(width: 334, height: 553)
+    }
+}
+
+struct CalculatorResult: View {
+    @Binding var stateIndex: Int
+    @Binding var ageString: String
+    @Binding var hourString: String
+    @Binding var city: City
+    @Binding var starsRateString: String
+    @Binding var result: String
+
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundStyle(.calculatorBackgroundShadow)
+                .frame(width: 334, height: 536)
+                .clipShape(.rect(cornerRadius: 30))
+                .offset(y: 17)
+            Rectangle()
+                .foregroundStyle(.calculatorBackground)
+                .frame(width: 334, height: 536)
+                .clipShape(.rect(cornerRadius: 30))
+            VStack {
+                FullDisplay(text: "Resultado:", valueString: $result, progress: 15)
+                    .padding(.top, 25)
+                Spacer()
+                KeyboardResult(restartButtonAction: {
+                    result = "0"
+                    ageString = "0"
+                    hourString = "19:00"
+                    city = cities[0]
+                    starsRateString = "0"
+                    stateIndex = 0
+                }, backButtonAction: {
+                    stateIndex -= 1
+                    // revert result
                 })
                     .padding(.bottom, 50)
             }
@@ -389,6 +473,7 @@ struct CalculatorView: View {
     @State var hourString: String = "19:00"
     @State var city: City = cities[0]
     @State var starsRateString: String = "0"
+    @State var result: String = "0"
 
     var body: some View {
         switch stateIndex {
@@ -396,33 +481,11 @@ struct CalculatorView: View {
         case 1: Calculator1(stateIndex: $stateIndex, ageString: $ageString)
         case 2: Calculator2(stateIndex: $stateIndex, hourString: $hourString)
         case 3: Calculator3(stateIndex: $stateIndex, city: $city)
-        case 4: Calculator4(stateIndex: $stateIndex, starsRateString: $starsRateString)
+        case 4: Calculator4(stateIndex: $stateIndex, ageString: $ageString, hourString: $hourString, city: $city, starsRateString: $starsRateString, result: $result)
+        case 5: CalculatorResult(stateIndex: $stateIndex, ageString: $ageString, hourString: $hourString, city: $city, starsRateString: $starsRateString, result: $result)
         default: EmptyView()
         }
     }
-}
-
-func logC(of value: Double, forBase base: Double) -> Double {
-    return log(value) / log(base)
-}
-
-func processHour(hourStr: String) -> Double {
-    // Extract hour and minute components
-    let parts = hourStr.components(separatedBy: ":")
-    let hour = Int(parts[0])!
-    let minute = Int(parts[1])!
-    
-    var result: Double = if (18...23).contains(hour) {
-        Double(hour) - 18
-    } else if (0...4).contains(hour) {
-        Double(hour) + 6
-    } else {
-        0
-    }
-    
-    result += Double(minute) / 60.0
-    
-    return result
 }
 
 struct ContentView: View {

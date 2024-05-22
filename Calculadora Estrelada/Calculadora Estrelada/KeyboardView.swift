@@ -7,42 +7,6 @@
 
 import SwiftUI
 
-//struct KeyboardView: View {
-//    @Binding var statesIndex: Int
-//    let startButtonAction: () -> Void
-//    let nextCityAction: () -> ()
-//    let previousCityAction: () -> ()
-//    let plusOneYearAction: () -> ()
-//    let backButtonAction: () -> ()
-//    let nextButtonAction: () -> ()
-//    let minusOneYearAction: () -> ()
-//    let plusOneHourAction: () -> ()
-//    let plusOneMinuteAction: () -> ()
-//    let minusOneHourAction: () -> ()
-//    let minusOneMinuteAction: () -> ()
-//    let plusOneStarsRateAction: () -> ()
-//    let minusOneStarsRateAction: () -> ()
-//    let finishButtonAction: () -> ()
-//    
-//    var body: some View {
-//        switch statesIndex {
-//        case 0:
-//            Keyboard0(startButtonAction: startButtonAction)
-//        case 1:
-//            Keyboard1(plusOneYearAction: plusOneYearAction, minusOneYearAction: minusOneYearAction,backButtonAction: backButtonAction, nextButtonAction: nextButtonAction)
-//        case 2:
-//            Keyboard2(plusOneHourAction: plusOneHourAction, plusOneMinuteAction: plusOneMinuteAction, minusOneHourAction: minusOneHourAction, minusOneMinuteAction: minusOneMinuteAction,backButtonAction: backButtonAction, nextButtonAction: nextButtonAction)
-//        case 3:
-//            Keyboard3(nextCityAction: nextCityAction, previousCityAction: previousCityAction, backButtonAction: backButtonAction, nextButtonAction: nextButtonAction)
-//        case 4:
-//            Keyboard4(plusOneStarsRateAction: plusOneStarsRateAction, minusOneStarsRateAction: minusOneStarsRateAction, backButtonAction: backButtonAction, finishButtonAction: finishButtonAction)
-//            
-//        default:
-//            EmptyView()
-//        }
-//    }
-//}
-
 struct Keyboard0: View {
     var startButtonAction: () -> ()
     var body: some View {
@@ -166,6 +130,30 @@ struct Keyboard4: View {
             HStack(spacing: 20) {
                 KeyboardButton.back(action: backButtonAction)
                 KeyboardButton.finish(action: finishButtonAction)
+            }
+        }
+    }
+}
+
+struct KeyboardResult: View {
+    let restartButtonAction: () -> ()
+    let backButtonAction: () -> ()
+    
+    var body: some View {
+        VStack(spacing: 22) {
+            HStack(spacing: 20) {
+                KeyboardButton.defaultButton
+                KeyboardButton.defaultButton
+                KeyboardButton.defaultButton
+            }
+            HStack(spacing: 20) {
+                KeyboardButton.defaultButton
+                KeyboardButton.defaultButton
+                KeyboardButton.defaultButton
+            }
+            HStack(spacing: 20) {
+                KeyboardButton.back(action: backButtonAction)
+                KeyboardButton.restart(action: restartButtonAction)
             }
         }
     }
