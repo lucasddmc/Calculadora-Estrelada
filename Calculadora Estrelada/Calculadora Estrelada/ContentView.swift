@@ -393,7 +393,7 @@ struct Calculator4: View {
                         print("starsRate is not convertable to INT, value: \(starsRateString)")
                         return
                     }
-                    if rate > 0 {
+                    if rate > 1 {
                         starsRateString = String(rate - 1)
                     }
                 }, backButtonAction: {
@@ -472,7 +472,7 @@ struct CalculatorView: View {
     @State var ageString: String = "0"
     @State var hourString: String = "19:00"
     @State var city: City = cities[0]
-    @State var starsRateString: String = "0"
+    @State var starsRateString: String = "1"
     @State var result: String = "0"
 
     var body: some View {

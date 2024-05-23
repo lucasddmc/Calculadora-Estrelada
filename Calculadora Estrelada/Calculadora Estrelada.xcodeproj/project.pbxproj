@@ -19,7 +19,8 @@
 		5A5D38CC2BFD50BC00DDA162 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38C92BFD50BC00DDA162 /* Minecraft.ttf */; };
 		5A5D38CD2BFD50BC00DDA162 /* Goldman-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5D38CA2BFD50BC00DDA162 /* Goldman-Bold.ttf */; };
 		5A5D38CF2BFD5BD500DDA162 /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38CE2BFD5BD500DDA162 /* ProgressViewStyle.swift */; };
-		5A5D38D12BFD6EDF00DDA162 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38D02BFD6EDF00DDA162 /* KeyboardView.swift */; };
+		5A5D38D52BFFC28100DDA162 /* KeyboardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38D42BFFC28100DDA162 /* KeyboardViews.swift */; };
+		5A5D38D72BFFC2A800DDA162 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5D38D62BFFC2A800DDA162 /* KeyboardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,8 @@
 		5A5D38C92BFD50BC00DDA162 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		5A5D38CA2BFD50BC00DDA162 /* Goldman-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Goldman-Bold.ttf"; sourceTree = "<group>"; };
 		5A5D38CE2BFD5BD500DDA162 /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
-		5A5D38D02BFD6EDF00DDA162 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		5A5D38D42BFFC28100DDA162 /* KeyboardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViews.swift; sourceTree = "<group>"; };
+		5A5D38D62BFFC2A800DDA162 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,7 @@
 				5A5D38BF2BFD4F3E00DDA162 /* TitleView.swift */,
 				5A5D38C42BFD4FB300DDA162 /* StoredCities.swift */,
 				5A5D38CE2BFD5BD500DDA162 /* ProgressViewStyle.swift */,
-				5A5D38D02BFD6EDF00DDA162 /* KeyboardView.swift */,
+				5A5D38D22BFFC25D00DDA162 /* Keyboard */,
 				5A5D38C12BFD4F7A00DDA162 /* Localizable.strings */,
 				5A5D38B32BFD4CED00DDA162 /* Assets.xcassets */,
 				5A5D38C62BFD500800DDA162 /* Calculadora-Estrelada-Info.plist */,
@@ -102,6 +104,23 @@
 				5A5D38C92BFD50BC00DDA162 /* Minecraft.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5A5D38D22BFFC25D00DDA162 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5A5D38D42BFFC28100DDA162 /* KeyboardViews.swift */,
+				5A5D38D32BFFC27000DDA162 /* KeyboardButtons */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		5A5D38D32BFFC27000DDA162 /* KeyboardButtons */ = {
+			isa = PBXGroup;
+			children = (
+				5A5D38D62BFFC2A800DDA162 /* KeyboardButton.swift */,
+			);
+			path = KeyboardButtons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,11 +199,12 @@
 			files = (
 				5A5D38B22BFD4CEC00DDA162 /* ContentView.swift in Sources */,
 				5A5D38CF2BFD5BD500DDA162 /* ProgressViewStyle.swift in Sources */,
-				5A5D38D12BFD6EDF00DDA162 /* KeyboardView.swift in Sources */,
 				5A5D38B02BFD4CEC00DDA162 /* Calculadora_EstreladaApp.swift in Sources */,
 				5A5D38BE2BFD4E7400DDA162 /* BackgroundAnimation.swift in Sources */,
 				5A5D38C02BFD4F3E00DDA162 /* TitleView.swift in Sources */,
+				5A5D38D72BFFC2A800DDA162 /* KeyboardButton.swift in Sources */,
 				5A5D38C52BFD4FB300DDA162 /* StoredCities.swift in Sources */,
+				5A5D38D52BFFC28100DDA162 /* KeyboardViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
